@@ -1,22 +1,21 @@
-package org.example.springwebtest.config.security
+package org.example.springwebtest.auth.dtos
 
-import lombok.Getter
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
-data class SecuredUser(
-        val email: String,
-        val password: String
+class SecuredUser(
+        private val email: String,
+        private val password: String
 ) : UserDetails {
 
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-        TODO("Not yet implemented")
+        return mutableListOf()
     }
 
     override fun getPassword() = password
     override fun getUsername() = email
-    override fun isAccountNonExpired() = false
-    override fun isAccountNonLocked() = false
-    override fun isCredentialsNonExpired() = false
+    override fun isAccountNonExpired() = true
+    override fun isAccountNonLocked() = true
+    override fun isCredentialsNonExpired() = true
     override fun isEnabled() = true
 }

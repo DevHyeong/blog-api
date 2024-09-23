@@ -1,4 +1,4 @@
-package org.example.springwebtest.controllers
+package org.example.springwebtest.api.controllers
 
 import jakarta.validation.Valid
 import org.example.springwebtest.domain.user.service.UserWriteService

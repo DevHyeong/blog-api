@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SpringWebTestApplication
+class BlogApiApplication
 
 fun main(args: Array<String>) {
-    runApplication<SpringWebTestApplication>(*args)
+    runApplication<BlogApiApplication>(*args)
 }

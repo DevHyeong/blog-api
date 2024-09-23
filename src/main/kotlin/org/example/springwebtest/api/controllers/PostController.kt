@@ -1,4 +1,4 @@
-package org.example.springwebtest.controllers
+package org.example.springwebtest.api.controllers
 
 import org.example.springwebtest.domain.post.dto.PostRequestDto
 import org.example.springwebtest.domain.post.service.PostService
@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api")
 class PostController(private val postService: PostService) {
 
     @PostMapping("/post")
-    fun createPost(postRequestDto: PostRequestDto){
+    fun createPost(@RequestBody postRequestDto: PostRequestDto){
         postService.createPost(postRequestDto)
     }
 }

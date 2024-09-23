@@ -1,4 +1,4 @@
-package org.example.springwebtest.controllers.exceptions
+package org.example.springwebtest.api.controllers.exceptions
 
 
 class DuplicateErrorException: RuntimeException {
