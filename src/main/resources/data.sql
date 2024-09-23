@@ -1,0 +1,1 @@
+INSERT INTO _user (id, email, nickname, password) VALUES (UUID(), 'wogud19@naver.com', '생각하는개발자', 'asdf1234!@')
